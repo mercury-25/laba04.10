@@ -15,6 +15,10 @@ var HelloWorldApp = angular.module("HelloWorldApp",[]);
 
 HelloWorldApp.controller("HelloWorldCtrl", function ($scope){
 $scope.message = m;
+
+$scope.clickHandler = function(){
+$scope.message = $scope.text;
+}
 });
 </script>
 </head>
@@ -23,5 +27,7 @@ $scope.message = m;
 
 <script src="js/bootstrap.js"></script> 
 
+<input ng-model="text" />
+<button ng-click="clickHandler()">Обновить</button>
 </body>
 </html>
